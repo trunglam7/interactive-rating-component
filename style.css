@@ -1,0 +1,119 @@
+:root{
+    --primary: hsl(25, 97%, 53%);
+    --neutral-w: hsl(0, 0%, 100%);
+    --neutral-lg: hsl(217, 12%, 63%);
+    --neutral-mg: hsl(216, 12%, 54%);
+    --neutral-db: hsl(213, 19%, 18%);
+    --neutral-vdb: hsl(216, 12%, 8%);
+    --overpass-font: 'Overpass', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: var(--overpass-font);
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 15px;
+    font-family: var(--overpass-font);
+    background-color: var(--neutral-vdb);
+    color: white;
+}
+
+main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p{
+    color: var(--neutral-mg);
+}
+
+.rating-container, .thank-you-container{
+    display: grid;
+    background-color: var(--neutral-db);
+    max-width: 360px;
+    padding: 25px;
+    border-radius: 20px;
+    min-height: 359px;
+}
+
+.rating-container{
+    gap: 22px;
+}
+
+.thank-you-container{
+    place-items: center;
+    text-align: center;
+}
+
+.rate-btn{
+    color: var(--neutral-mg);
+    background-color: hsl(213, 19%, 22%);
+    border-style: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+[id^="rate-"]{
+    transition: color 0.5s, background-color 0.5s;
+    cursor: pointer;
+}
+
+[id^="rate-"]:hover {
+    color: white;
+    background-color: var(--neutral-lg);
+}
+
+[id^="rate-"]:focus {
+    color: white;
+    background-color: var(--primary);
+}
+
+.rate-btn-container{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 10px;
+}
+
+.submit-btn{
+    text-transform: uppercase;
+    border-style: none;
+    background-color: var(--primary);
+    color: white;
+    height: 45px;
+    border-radius: 50px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: color 0.5s, background-color 0.5s;
+}
+
+.submit-btn:hover{
+    color: var(--primary);
+    background-color: white;
+}
+
+.rating-result{
+    display: flex;
+    background-color: hsl(213, 19%, 22%);
+    width: 190px;
+    margin: auto;
+    padding: 10px 5px 5px 5px;
+    border-radius: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.rating-result p{
+    color: var(--primary);
+}
+
