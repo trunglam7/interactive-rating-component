@@ -52,7 +52,7 @@ p{
     text-align: center;
 }
 
-.rate-btn{
+.rate-btn, .star-icon{
     color: var(--neutral-mg);
     background-color: hsl(213, 19%, 22%);
     border-style: none;
@@ -64,19 +64,27 @@ p{
     align-items: center;
 }
 
-[id^="rate-"]{
+.selected{
+    color: white;
+    background-color: var(--primary);
+    border-style: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.rate-btn{
     transition: color 0.5s, background-color 0.5s;
     cursor: pointer;
 }
 
-[id^="rate-"]:hover {
+.rate-btn:hover {
     color: white;
     background-color: var(--neutral-lg);
-}
-
-[id^="rate-"]:focus {
-    color: white;
-    background-color: var(--primary);
 }
 
 .rate-btn-container{
